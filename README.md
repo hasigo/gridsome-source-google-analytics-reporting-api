@@ -47,7 +47,7 @@ query {
 }
 ```
 
-if you set optional `bindSchema`(line `allContentfulPost`), you can get like this,
+if you set optional `bindSchema`(like `bindSchema: "ContentfulPost"`), you can get like this,
 
 ```graphql
 query {
