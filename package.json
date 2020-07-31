@@ -1,6 +1,6 @@
 {
   "name": "gridsome-source-google-analytics-reporting-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gridsome Source for Google Analytics Reporting API",
   "repository": "hasigo/gridsome-source-google-analytics-reporting-api",
   "main": "gridsome.server.js",
@@ -12,7 +12,16 @@
   ],
   "author": "nabeen <nabeen@hasigo.co.jp>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint './**/*.{vue,ts,js}'",
+    "lint:fix": "eslint --fix './**/*.{vue,ts,js}'"
+  },
   "dependencies": {
-    "googleapis": "^54.0.0"
+    "googleapis": "^57.0.0"
+  },
+  "devDependencies": {
+    "eslint": "7.5.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.0"
   }
 }

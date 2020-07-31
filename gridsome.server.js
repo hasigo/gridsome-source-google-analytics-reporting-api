@@ -1,15 +1,17 @@
-const { google } = require("googleapis");
+const { google } = require('googleapis');
 
 class SourceGoogleAnalyticsReporting {
   constructor(api, options) {
-    const { email, key, viewId, startDate, bindSchema } = options;
+    const {
+      email, key, viewId, startDate, bindSchema,
+    } = options;
     this.viewId = viewId;
     this.startDate = startDate;
 
     this.jwt = new google.auth.JWT({
-      email: email,
-      key: key,
-      scopes: ["https://www.googleapis.com/auth/analytics.readonly"],
+      email,
+      key,
+      scopes: ['https://www.googleapis.com/auth/analytics.readonly'],
     });
 
     api.loadSource(async (store) => {
@@ -22,7 +24,7 @@ class SourceGoogleAnalyticsReporting {
         addSchemaResolvers({
           [bindSchema]: {
             totalCount: {
-              type: "Int",
+              type: 'Int',
               resolve(obj) {
                 return Number(self.resolver(obj));
               },
@@ -37,28 +39,29 @@ class SourceGoogleAnalyticsReporting {
     const pv = this.result.data.rows.filter((item) => item[0] === obj.path);
     if (pv.length) {
       return pv.pop()[1];
-    } else {
-      return 0;
     }
+    return 0;
   }
 
   async getContents(actions) {
     await this.jwt.authorize();
-    this.result = await google.analytics("v3").data.ga.get({
+    this.result = await google.analytics('v3').data.ga.get({
       auth: this.jwt,
-      ids: "ga:" + this.viewId,
-      "start-date": this.startDate || "2009-01-01",
-      "end-date": "today",
-      dimensions: "ga:pagePath",
-      metrics: "ga:pageviews",
-      sort: "-ga:pageviews",
+      ids: `ga:${this.viewId}`,
+      'start-date': this.startDate || '2009-01-01',
+      'end-date': 'today',
+      dimensions: 'ga:pagePath',
+      metrics: 'ga:pageviews',
+      sort: '-ga:pageviews',
     });
 
     const pv = actions.addCollection({
-      typeName: "PageViews",
+      typeName: 'PageViews',
     });
 
-    for (let [path, totalCount] of this.result.data.rows) {
+    // TODO: mod for-of statement to every statement
+    // eslint-disable-next-line no-restricted-syntax
+    for (const [path, totalCount] of this.result.data.rows) {
       pv.addNode({
         id: path,
         path,
