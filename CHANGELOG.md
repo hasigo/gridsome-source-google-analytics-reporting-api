@@ -1,3 +1,12 @@
+## [0.0.6](https://github.com/hasigo/gridsome-source-google-analytics-reporting-api/compare/v0.0.5...v0.0.6) (2020-08-04)
+
+
+### Bug Fixes
+
+* fixed doc, readme ([#22](https://github.com/hasigo/gridsome-source-google-analytics-reporting-api/issues/22)) ([abda704](https://github.com/hasigo/gridsome-source-google-analytics-reporting-api/commit/abda704fc672c90d29ee3640feedb3bc8245bd06))
+
+
+
 ## [0.0.5](https://github.com/hasigo/gridsome-source-google-analytics-reporting-api/compare/v0.0.4...v0.0.5) (2020-08-04)
 
 
