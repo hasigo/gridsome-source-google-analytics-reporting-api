@@ -1,8 +1,8 @@
 {
-  "name": "gridsome-source-google-analytics-reporting-api",
+  "name": "@hasigo/gridsome-source-google-analytics-reporting-api",
   "version": "0.0.4",
   "description": "Gridsome Source for Google Analytics Reporting API",
-  "repository": "hasigo/gridsome-source-google-analytics-reporting-api",
+  "repository": "git://github.com/hasigo/gridsome-source-google-analytics-reporting-api.git",
   "main": "gridsome.server.js",
   "keywords": [
     "gridsome",
@@ -10,6 +10,9 @@
     "analytics",
     "reporting"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "nabeen <nabeen@hasigo.co.jp>",
   "license": "MIT",
   "scripts": {
