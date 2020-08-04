@@ -5,7 +5,7 @@ inspired by [antonmedv/gatsby\-source\-google\-analytics\-reporting\-api](https:
 ## Install
 
 ```
-npm i hasigo/gridsome-source-google-analytics-reporting-api
+npm i @hasigo/gridsome-source-google-analytics-reporting-api
 ```
 
 ## Configure
