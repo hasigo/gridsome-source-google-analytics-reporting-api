@@ -1,6 +1,6 @@
 {
   "name": "@hasigo/gridsome-source-google-analytics-reporting-api",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Gridsome Source for Google Analytics Reporting API",
   "repository": "git://github.com/hasigo/gridsome-source-google-analytics-reporting-api.git",
   "main": "gridsome.server.js",
