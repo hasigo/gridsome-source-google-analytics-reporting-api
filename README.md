@@ -36,7 +36,24 @@ module.exports = {
     },
     ...
 };
+```
 
+if you use `key` from `.env` file, you should setup like below.
+
+```js
+module.exports = {
+  plugins: [
+    ...
+    {
+      use: `@hasigo/gridsome-source-google-analytics-reporting-api`,
+      options: {
+        ...
+        key: process.env.GA_PRIVATE_KEY.replace(/\\n/g, '\n'),
+        ...
+      }
+    },
+    ...
+};
 ```
 
 ## Usage
