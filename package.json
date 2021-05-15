@@ -21,7 +21,7 @@
     "release": "shipjs prepare"
   },
   "dependencies": {
-    "googleapis": "58.0.0"
+    "googleapis": "73.0.0"
   },
   "devDependencies": {
     "eslint": "7.12.0",
