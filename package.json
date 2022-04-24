@@ -26,7 +26,7 @@
   "devDependencies": {
     "eslint": "7.12.0",
     "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-import": "2.26.0",
     "shipjs": "0.22.0"
   }
 }
